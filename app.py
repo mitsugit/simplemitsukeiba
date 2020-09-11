@@ -19,8 +19,9 @@ def main():
 
 @app.route("/")
 def main_page():
-    num = 1111
-    return render_template("mainpage.html",num=num)
+    #　ここに空でも良いのでresultをいれておかないと、始めてサイトにアクセスした時にエラーになる。
+    result = ""
+    return render_template("mainpage.html",result=result)
 
 @app.route("/", methods=["POST"])
 def sum_cal():
