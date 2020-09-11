@@ -4,25 +4,28 @@
     </head>
     <body>
     this is the main page
+    
     <p>
-        対象オッズを入力してください。
+        対象オッズを入力してください。 {{result}}
         </p>
     
         <p>
+
+    <form action="" method="POST">
         <label>オッズ➀&nbsp&nbsp&nbsp&nbsp; 
-            <input type="number" name="keyword1" value="2" style="width: 60px;" min="1" max="200" step="0.1">
+            <input type="number" name="keyword1" value="{{result.odds1}}" style="width: 60px;" min="1" max="200" step="0.1">
         </label>
         倍
         </p>
         <p>
         <label>オッズ➁&nbsp&nbsp&nbsp&nbsp; 
-            <input type="number" name="keyword2" value="5" style="width: 60px;" min="1" max="200" step="0.1">
+            <input type="number" name="keyword2" value="{{result.odds2}}" style="width: 60px;" min="1" max="200" step="0.1">
         </label>
         倍
         </p>
         <p>
         <label>オッズ➂&nbsp&nbsp&nbsp&nbsp; 
-            <input type="number" name="keyword3" value="7" style="width: 60px;" min="1" max="200" step="0.1">
+            <input type="number" name="keyword3" value="{{result.odds3}}" style="width: 60px;" min="1" max="200" step="0.1">
         </label>
         倍
         </p>
