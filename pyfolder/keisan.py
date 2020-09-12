@@ -68,6 +68,13 @@ def sum_cal():
 
     each_bet = [int(np.round(budget * i/100,-2)) for i in ratio]
 
+    bet_dict={}
+    for num,i in enumerate(each_bet):
+        num=num+1
+        key = "odds"+str(num)
+        bet_dict[key]=i
+
+
     print("each_bet:   ",each_bet)
 
 
@@ -75,6 +82,12 @@ def sum_cal():
 
     return_list = [xx * yy for (xx,yy) in zip(each_bet,odds_list)]
     return_list = list(map(lambda x: math.floor(x), return_list))
+
+    return_dict={}
+    for num,i in enumerate(return_list):
+        num=num+1
+        key = "odds"+str(num)
+        return_dict[key]=i
 
     print("return_list:   ",return_list)
 
@@ -84,8 +97,14 @@ def sum_cal():
 
     profit_list = [x-total_bet for x in return_list]
 
+    profit_dict={}
+    for num,i in enumerate(profit_list):
+        num=num+1
+        key = "odds"+str(num)
+        profit_dict[key]=i
 
-    result = {'odds_dict':odds_dict,'each_bet':each_bet,'total_bet':total_bet,\
-              'return_list':return_list,'budget':budget}
+
+    result = {'odds_dict':odds_dict,'bet_dict':bet_dict,'total_bet':total_bet,\
+              'return_dict':return_dict,'profit_dict':profit_dict,'budget':budget}
     return result
 

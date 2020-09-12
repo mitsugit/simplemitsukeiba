@@ -20,7 +20,7 @@ def main():
 @app.route("/")
 def main_page():
     #　ここに空でも良いのでresultをいれておかないと、始めてサイトにアクセスした時にエラーになる。
-    result = ""
+    result = {"odds_dict":"","bet_dict":"",'return_dict':"",'profit_dict':""}
     return render_template("mainpage.html",result=result)
 
 @app.route("/", methods=["POST"])
