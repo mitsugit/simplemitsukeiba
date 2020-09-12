@@ -6,12 +6,24 @@
     this is the main page
     
     <p>
-        対象オッズを入力してください。 {{result}}
+        対象オッズを入力してください。 
+        予算{{result.budget}}
+        ベットリスト{{result.each_bet}}
+        合計ベット{{result.total_bet}}
+        配当リスト{{result.return_list}}
+        
         </p>
     
-        <p>
+        
 
     <form action="" method="POST">
+        <p>
+            <label>予算&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp; 
+                <input type="number" name="budget" value="" style="width: 60px;" min="100" max="1000000000000" step="100">
+            </label>
+            円
+        </p>
+        <p>
         <label>オッズ➀&nbsp&nbsp&nbsp&nbsp; 
             <input type="number" name="keyword1" value="{{result.odds1}}" style="width: 60px;" min="1" max="200" step="0.1">
         </label>
@@ -36,10 +48,7 @@
         </div>
     </form>
 
-    <h2>秋元真夏</h2>
-    <form method="GET" action="/test">
-      <button type="submit">Start Scraping</button>
-    </form>
+
 
 
 
